@@ -75,13 +75,14 @@ public class PaginaLogin extends JFrame {
 		btn_entrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (checkLogin(txt_usuario.getText(), new String(txt_senha.getPassword()))) {
-					JOptionPane.showMessageDialog(null, "Seja bem-vindo(a), " + txt_usuario.getText().toUpperCase(), "LOGADO COM SUCESSO", JOptionPane.PLAIN_MESSAGE);
 					PaginaTarefas novaTela = new PaginaTarefas();
 					setVisible(false);
 					novaTela.setVisible(true);
 					novaTela.setLocationRelativeTo(null);
 				} else {
-					JOptionPane.showMessageDialog(null, "Usuário ou senha inválida. Tente novamente!", "LOGIN INVÁLIDO", JOptionPane.ERROR_MESSAGE);		
+					JOptionPane.showMessageDialog(null, "Usuário ou senha inválida. Tente novamente!", "LOGIN INVÁLIDO", JOptionPane.ERROR_MESSAGE);
+					txt_usuario.setText(null);
+					txt_senha.setText(null);
 				}
 			}
 		});

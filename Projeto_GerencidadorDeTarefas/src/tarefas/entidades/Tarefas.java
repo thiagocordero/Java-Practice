@@ -1,4 +1,4 @@
-package tarefas.gui;
+package tarefas.entidades;
 
 public class Tarefas {
 	
