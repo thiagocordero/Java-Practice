@@ -16,6 +16,10 @@ import java.awt.event.ActionEvent;
 
 public class PaginaLogin extends JFrame {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPasswordField txt_senha;
 	private JTextField txt_usuario;
